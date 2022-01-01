@@ -11,7 +11,7 @@ $penerbit = $_POST['penerbit'];
 if (!$id_buku || !$judul_buku || !$nama_pengarang || !$tahun_terbit || !$penerbit) {
     echo json_encode (array ('message'=>'required field is empty.'));
 } else {
-    $query = mysqli_query ($conn, "INSERT INTO tb_student VALUES ('$id_buku', '$judul_buku', '$nama_pengarang', '$tahun_terbit', '$penerbit')");
+    $query = mysqli_query ($conn, "INSERT INTO tb_data VALUES ('$id_buku', '$judul_buku', '$nama_pengarang', '$tahun_terbit', '$penerbit')");
     
     if ($query) {
         echo json_encode (array ('message'=>'Data buku berhasil ditambahkan.'));
